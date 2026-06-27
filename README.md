@@ -5,13 +5,19 @@ Agentes de desarrollo de software para [opencode](https://opencode.ai). Sistema 
 ## Instalación
 
 ```bash
-curl -sL https://raw.githubusercontent.com/tu-org/dev-agents/main/install.sh | bash
+rm -rf /tmp/da
+git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
+cp -r /tmp/da/{agents,templates,persona.md} .opencode/
+rm -rf /tmp/da
 ```
 
 ## Actualización
 
 ```bash
-curl -sL https://raw.githubusercontent.com/tu-org/dev-agents/main/install.sh | bash
+rm -rf /tmp/da
+git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
+cp -r /tmp/da/{agents,templates,persona.md} .opencode/
+rm -rf /tmp/da
 ```
 
 ## Qué incluye
@@ -41,6 +47,7 @@ curl -sL https://raw.githubusercontent.com/tu-org/dev-agents/main/install.sh | b
 ## Requisitos
 
 - [opencode](https://opencode.ai) instalado
+- Llave SSH configurada en GitHub (`git@github.com`)
 - Un proyecto de software existente (el script se ejecuta en la raíz)
 
 ## Flujo
