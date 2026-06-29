@@ -7,6 +7,7 @@ Agentes de desarrollo de software para [opencode](https://opencode.ai). Sistema 
 ```bash
 rm -rf /tmp/da
 git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
+mkdir -p .opencode
 cp -r /tmp/da/{agents,templates,persona.md} .opencode/
 rm -rf /tmp/da
 ```
@@ -16,6 +17,7 @@ rm -rf /tmp/da
 ```bash
 rm -rf /tmp/da
 git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
+mkdir -p .opencode
 cp -r /tmp/da/{agents,templates,persona.md} .opencode/
 rm -rf /tmp/da
 ```
