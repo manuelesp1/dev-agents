@@ -1,6 +1,6 @@
 # dev-agents
 
-Agentes de desarrollo de software para [opencode](https://opencode.ai). Sistema multi-agente de 13 agentes especializados que cubren planificación, ejecución, auditoría, debugging, testing y archivado.
+Agentes de desarrollo de software para [opencode](https://opencode.ai). Sistema multi-agente de 13 agentes especializados que cubren planificación, ejecución, auditoría, debugging, testing y archivado. Incluye bootstrap (AGENTS.md) y template de design system (DESIGN.md).
 
 ## Instalación
 
@@ -8,7 +8,7 @@ Agentes de desarrollo de software para [opencode](https://opencode.ai). Sistema 
 rm -rf /tmp/da
 git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
 mkdir -p .opencode
-cp -r /tmp/da/{agents,templates,persona.md} .opencode/
+cp /tmp/da/{AGENTS.md,DESIGN.md} .opencode/ && cp -r /tmp/da/{agents,templates,persona.md} .opencode/
 rm -rf /tmp/da
 ```
 
@@ -18,7 +18,7 @@ rm -rf /tmp/da
 rm -rf /tmp/da
 git clone --depth 1 git@github.com:manuelesp1/dev-agents.git /tmp/da
 mkdir -p .opencode
-cp -r /tmp/da/{agents,templates,persona.md} .opencode/
+cp /tmp/da/{AGENTS.md,DESIGN.md} .opencode/ && cp -r /tmp/da/{agents,templates,persona.md} .opencode/
 rm -rf /tmp/da
 ```
 
@@ -40,10 +40,15 @@ rm -rf /tmp/da
 | **Archive** | Consolida reportes, actualiza PROJECT.md, persiste en Engram |
 | **QueryReviewer** | Revisa rendimiento de SPs y queries con EXPLAIN |
 
+| Archivo | Rol |
+|---------|-----|
+| **AGENTS.md** | Bootstrap: le dice a cada agente que lea PROJECT.md y DESIGN.md si existen |
+| **DESIGN.md** | Template de design system: colores, tipografía, reglas obligatorias |
+
 ## Qué NO incluye
 
 - **Skills** (`amg-payments`, `amg-portfolio`, etc.) — específicos de cada proyecto.
-- **PROJECT.md** — lo genera Explore al iniciar un proyecto nuevo.
+- **PROJECT.md** y **DESIGN.md (concreto)** — se generan/llenan por proyecto. El template DESIGN.md está incluido.
 - **`opencode.json`** — configuración de opencode, propia de cada proyecto.
 
 ## Requisitos
